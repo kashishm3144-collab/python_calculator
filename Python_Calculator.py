@@ -19,7 +19,11 @@ elif operator == '-':
 elif operator == '*':
     print("Multiplication is :", a*b)
 elif operator == '/':
-    print("Division is :", a/b)
+    if b != 0:
+        print("Division is :", a/b)
+    else:
+        print("Cannot Divide by Zero.")
+        
 elif operator == '**':
     print("Square of,\na :",a**2)
     print("b :",b**2)
@@ -41,17 +45,12 @@ else :
 table = input("Do you want to calculate the Table of any Number?\n(Yes/No) : ")
 
 if table.lower() == "yes":
+    
     t1 = int(input("Enter the Table Number : "))
-    print(f"{t1} * 1 =",t1*1)
-    print(f"{t1} * 2 =",t1*2)
-    print(f"{t1} * 3 =",t1*3)
-    print(f"{t1} * 4 =",t1*4)
-    print(f"{t1} * 5 =",t1*5)
-    print(f"{t1} * 6 =",t1*6)
-    print(f"{t1} * 7 =",t1*7)
-    print(f"{t1} * 8 =",t1*8)
-    print(f"{t1} * 9 =",t1*9)
-    print(f"{t1} * 10 =",t1*10)
+
+    for i in range(1,11):
+        print(f"{t1} * {i} = {t1*i}")
+
     print("Thank You for using this Smart Calculator, hope it is helpful :)")
 elif table.lower() == "no":
     print("Thank you...")
